@@ -1,0 +1,103 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.gsered.projectc.gse.ExploreFragment">
+
+    <ScrollView
+        android:id="@+id/fragment_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/topslider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorMeganta"
+                android:orientation="horizontal">
+            </android.support.v7.widget.RecyclerView>
+
+            <!--<include-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/singlerow"-->
+                <!--layout="@layout/singlerow5items"-->
+                <!--android:layout_below="@+id/topslider"/>-->
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/carouselView"
+                android:layout_below="@+id/topslider"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="2dp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/carouselView"
+                android:background="@color/colorWhite"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:overScrollMode="never"
+                android:clipToPadding="false">
+            </android.support.v4.view.ViewPager>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/companyslider"
+                android:orientation="horizontal"
+                android:layout_below="@+id/viewpager"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <include
+                android:id="@+id/categorygrid1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/companyslider"
+                layout="@layout/gridcategory_strip1" />
+
+            <!--<include-->
+                <!--android:id="@+id/singlerow2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_below="@+id/categorygrid1"-->
+                <!--layout="@layout/singlerow5items2" />-->
+
+            <include
+                android:id="@+id/categorygrid2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categorygrid1"
+                layout="@layout/gridcategory_strip2" />
+
+            <include
+                android:id="@+id/invitestrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categorygrid2"
+                layout="@layout/invitestrip"
+                android:layout_marginBottom="5dp"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/invitestrip"
+                layout="@layout/mainpage_news"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="60dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VisitShop"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:src="@drawable/heart"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="Thank you to support"/>
+
+        <TextView
+            android:id="@+id/user_supporting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Hers"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:padding="2dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:text="Please note"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:padding="2dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:text="1.All contribution will be executed after shopping cancellation period"/>
+        <TextView
+            android:id="@+id/condition2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:padding="2dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:text="2."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="22dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Enjoy GSE Red!"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20sp"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@mipmap/ic_launcher_round"/>
+
+        <ImageView
+            android:id="@+id/indicator1"
+            android:layout_marginLeft="40dp"
+            android:layout_width="30dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_chevron_right_black_24dp"/>
+        <ImageView
+            android:id="@+id/indicator2"
+            android:layout_width="30dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_chevron_right_black_24dp"/>
+        <ImageView
+            android:id="@+id/indicator3"
+            android:layout_width="30dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_chevron_right_black_24dp"/>
+        <ImageView
+            android:id="@+id/indicator4"
+            android:layout_marginRight="40dp"
+            android:layout_width="30dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_chevron_right_black_24dp"/>
+        <!--<ProgressBar-->
+            <!--android:id="@+id/progressstatus"-->
+            <!--android:layout_margin="20sp"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="2dp"-->
+            <!--style="@android:style/Widget.ProgressBar.Horizontal"-->
+            <!--android:progress="25"-->
+            <!--android:max="2"-->
+            <!--android:progressTint="#ee163b"-->
+            <!--android:backgroundTint="@color/grey"-->
+            <!--android:layout_gravity="center"/>-->
+
+        <ImageView
+            android:id="@+id/companylogo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@mipmap/ic_logo_paytm"/>
+    </LinearLayout>
+
+    <View
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:background="@color/darkgrey" />
+
+    <TextView
+        android:id="@+id/redirectnow"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:text="If you are not automatically re-directed, please click here"/>
+
+</LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1175795558096494/8183225438">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

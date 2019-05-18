@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <GridLayout
+            android:id="@+id/grid_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:rowCount="2"
+            android:columnCount="3"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp">
+
+            <!--food-->
+            <LinearLayout
+                android:id="@+id/food"
+                android:orientation="vertical"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:background="@color/colorWhite"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/food" />
+
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Food"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+            </LinearLayout>
+            <!--Local-->
+            <LinearLayout
+                android:id="@+id/local"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="5dp"
+                android:background="@color/colorWhite"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/local" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Local Deals"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <!--fashion    -->
+            <LinearLayout
+                android:id="@+id/fashion"
+                android:orientation="vertical"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:gravity="center"
+                android:layout_gravity="fill"
+                android:layout_margin="5dp"
+                android:background="@color/colorWhite"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/fashion" />
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:text="Fashion"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <!--cars-->
+            <LinearLayout
+                android:id="@+id/cars"
+                android:layout_gravity="fill"
+                android:orientation="vertical"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:background="@color/colorWhite">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cab" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textSize="12dp"
+                    android:text="Cars"
+                    android:padding="5dp"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <!--movies-->
+            <LinearLayout
+                android:id="@+id/movies"
+                android:orientation="vertical"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:background="@color/colorWhite"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/movie" />
+
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Films"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <!--health beauty-->
+            <LinearLayout
+                android:id="@+id/healthbeauty"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="5dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:textAlignment="center">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/beauty" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Beauty &amp; Health"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+        </GridLayout>
+</RelativeLayout>

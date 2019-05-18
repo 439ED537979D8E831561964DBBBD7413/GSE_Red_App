@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "943766829899",
+    "firebase_url": "https://gse-red.firebaseio.com",
+    "project_id": "gse-red",
+    "storage_bucket": "gse-red.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943766829899:android:293b25786a4d0530",
+        "android_client_info": {
+          "package_name": "com.gsered.gse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943766829899-a46a9p92k23i3dhvvgtm0rpatpa8h1hg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gsered.gse",
+            "certificate_hash": "ad18246e14f3dab29625f550ebdcb87eefbdad8f"
+          }
+        },
+        {
+          "client_id": "943766829899-748kadotr9fg3psqbhh8lotjevpdm2jh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gsered.gse",
+            "certificate_hash": "57b9d371bc03d297026c71cf17231e9f569329b5"
+          }
+        },
+        {
+          "client_id": "943766829899-cus1pg65gc3ml40f9194vkat3j170as0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg4zk5emJZ66q1G86DdS8ieD5ktxPUVY0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943766829899-cus1pg65gc3ml40f9194vkat3j170as0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

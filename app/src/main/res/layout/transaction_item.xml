@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newsstrip"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/transactionimage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/onhold"
+        android:layout_margin="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/transactiontitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/transactionimage"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Saket Goyal"
+        android:textColor="@color/colorBlack"
+        android:textSize="15dp"/>
+    <TextView
+        android:id="@+id/transactionamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Rs.1000"
+        android:textColor="@color/colorBlack"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/transactiondate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transactiontitle"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/transactionimage"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="17 April 2019"
+        android:textSize="12dp"/>
+    <TextView
+        android:id="@+id/transactiontype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transactionamount"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:text="Direct Donation"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:textSize="15dp"/>
+
+</RelativeLayout>

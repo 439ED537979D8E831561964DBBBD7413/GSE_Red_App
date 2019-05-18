@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".games.GamesMainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/topslider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorMeganta"
+                android:orientation="horizontal">
+            </android.support.v7.widget.RecyclerView>
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/carouselView"
+                android:layout_below="@+id/topslider"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/recommendedtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Recommended Games"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/carouselView"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/companyslider"
+                android:orientation="horizontal"
+                android:layout_below="@+id/recommendedtext"
+                android:layout_marginBottom="5dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/categorywithouttitle1"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:layout_below="@+id/companyslider"
+                android:layout_marginBottom="5dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/actiontext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categorywithouttitle1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp"
+                    android:text="Action" />
+
+                <TextView
+                    android:id="@+id/actionseealltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:text="See All"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/actiontext"
+                android:id="@+id/category1">
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/earningtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Highest Earning &amp; Donating"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/category1"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/highestearningslider"
+                android:orientation="horizontal"
+                android:layout_below="@+id/earningtext"
+                android:layout_marginBottom="5dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/mindgametext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/highestearningslider"
+                android:padding="10dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp"
+                    android:text="Mind Games" />
+
+                <TextView
+                    android:id="@+id/mindseealltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:text="See All"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mindgamelist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/mindgametext"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/sportstext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mindgamelist"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp"
+                    android:text="Sports" />
+
+                <TextView
+                    android:id="@+id/sportseealltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:text="See All"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sportstext"
+                android:id="@+id/category2">
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/categorywithouttitle2"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:layout_below="@+id/category2"
+                android:layout_marginBottom="5dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/arcadetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categorywithouttitle2"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp"
+                    android:text="Arcade" />
+
+                <TextView
+                    android:id="@+id/arcadeseealltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:text="See All"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/arcadetext"
+                android:id="@+id/category3">
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/strategytext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/category3"
+                android:padding="10dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp"
+                    android:text="Strategy" />
+
+                <TextView
+                    android:id="@+id/strategyseealltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:text="See All"
+                    android:textColor="@color/colorBlack"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/strategylist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/strategytext"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp">
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

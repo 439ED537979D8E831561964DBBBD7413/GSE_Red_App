@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:background="@color/colorPrimary">
+
+    <!--<TextView-->
+        <!--android:id="@+id/causetitle"-->
+        <!--android:layout_width="240dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:lineSpacingExtra="5dp"-->
+        <!--android:gravity="center"-->
+        <!--android:maxLines="2"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--android:text="Cause Title ejfb fjcnb rcndjb"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--android:textSize="25sp" />-->
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="15dp"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/causeimage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/refer1" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <!--<TextView-->
+        <!--android:id="@+id/causedescription"-->
+        <!--android:layout_width="240dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:lineSpacingExtra="5dp"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="16sp"-->
+        <!--android:maxLines="2"-->
+        <!--android:text="Caue Description Caue Description Caue Description Caue Description" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/companyname"-->
+        <!--android:layout_width="240dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="16sp"-->
+        <!--android:maxLines="1"-->
+        <!--android:textColor="#A0A0A0"-->
+        <!--android:text="From GSE Red" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/seemoredetail"-->
+        <!--android:layout_width="240dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="16sp"-->
+        <!--android:maxLines="1"-->
+        <!--android:text="see details" />-->
+
+</LinearLayout>

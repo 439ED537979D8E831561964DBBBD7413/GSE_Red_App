@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gsered.gse">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".games.GamesMainActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".topdonors.TopDonorsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".smartapp.KidsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".settings.PersonalSettingActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".dashboard.TransactionActivity"
+            android:parentActivityName=".dashboard.dashboard" />
+        <activity
+            android:name=".dashboard.dashboard"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".smartapp.RentalCarsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.CricketActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.EntertainmentActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.EducationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.ProductionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.GiftsCakesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.BooksActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.ElectronicsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.HomeServicesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.MedicineActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.GroceryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.HealthBeautyActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.FilmsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.SongsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.NewsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.VideosActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.GamesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rewards.BankAccountDetailsActivity"
+            android:parentActivityName=".rewards.RewardActivity" />
+        <activity
+            android:name=".InternetStatusActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver android:name=".CheckInternetConnection">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".InviteActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".news.NewsActivity" />
+        <activity
+            android:name=".smartapp.ShoppingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.LocalActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.TravelActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.HotelActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.SocialActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".smartapp.FoodActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="gsered.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".search.SearchActivity"
+            android:label="Search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".explore" />
+        <activity
+            android:name=".DynamicActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".aboutus"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".contact_us"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".write_us"
+            android:parentActivityName=".contact_us" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".account.SetupAccount" />
+        <activity android:name=".WebsiteView" />
+        <activity android:name=".NewsFeed.NewsFragment" />
+        <activity android:name=".DynamicNGOActivity" />
+        <activity
+            android:name=".DonationActivity"
+            android:label="GSE Red" /> <!-- Add your API key here -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_J3ZQ2e7ceP0pbj" />
+
+        <activity
+            android:name=".SignupActivity"
+            android:label="SignUp" />
+        <activity
+            android:name=".SigninActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CauseActivity" />
+        <activity
+            android:name=".CouponsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".VisitShop"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ReferYourFriend" />
+        <activity
+            android:name=".MarketingKit"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ScratchGift"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ScratchGiftDetail"
+            android:parentActivityName=".ScratchGift" />
+        <activity
+            android:name=".reward.Reward"
+            android:parentActivityName=".MainActivity" />
+
+        <service android:name=".pushnotification">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".rewards.RewardActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ForgotPassword"
+            android:parentActivityName=".SigninActivity" />
+        <activity
+            android:name=".OpenUrl"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

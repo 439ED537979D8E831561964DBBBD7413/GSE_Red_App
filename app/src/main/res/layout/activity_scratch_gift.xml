@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ScratchGift">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/colorPrimary"
+        android:foregroundGravity="center"
+        android:overScrollMode="never"
+        android:clipToPadding="false">
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewpager"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Cause Title ejfb fjcnb rcndjb"
+        android:textColor="@color/colorBlack"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:text="Caue Description Caue Description Caue Description Caue Description" />
+
+    <TextView
+        android:id="@+id/companyname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:textColor="#A0A0A0"
+        android:text="From GSE Red" />
+
+    <TextView
+        android:id="@+id/seemoredetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/companyname"
+        android:background="@drawable/cornorroundbutton"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:text="shop" />
+
+    <RelativeLayout
+        android:id="@+id/totalreward"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:text="Want to see! How much you rewarded for your shopping?"
+            android:textSize="13dp"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/rewardbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/redeembutton"
+            android:layout_alignParentRight="true"
+            android:text="My Rewards"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

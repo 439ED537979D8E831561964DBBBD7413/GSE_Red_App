@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/blacksolidborder_onlybottom"
+    android:id="@+id/shareimagecontent">
+
+    <ImageView
+        android:id="@+id/shareimage"
+        android:padding="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="center"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/darkgrey"
+        android:textSize="18sp"
+        android:text="Coupon Title"
+        android:maxLines="2"
+        android:id="@+id/sharetitle" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkgrey"
+            android:textSize="15sp"
+            android:text="12-feb-2019"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/sharedate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkgrey"
+            android:textSize="15sp"
+            android:text="12-feb-2019"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/sendtext"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textSize="16sp"
+            android:text="Share"
+            android:background="@color/colorWhite"
+            android:drawableLeft="@drawable/ic_menu_share"
+            android:drawablePadding="4dp"
+            android:textColor="@color/darkgrey"
+            android:layout_alignParentRight="true" />
+
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="5dp"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:text="Share"-->
+            <!--android:background="@color/colorWhite"-->
+            <!--android:drawableLeft="@drawable/ic_menu_share"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:layout_alignParentRight="true" />-->
+
+    </RelativeLayout>
+</LinearLayout>

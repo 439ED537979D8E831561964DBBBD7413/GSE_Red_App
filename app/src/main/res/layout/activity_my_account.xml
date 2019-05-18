@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MyAccountActivity"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:id="@+id/scrolView_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <RelativeLayout
+            android:id="@+id/linear_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/acc_view_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="16dp"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:src="@drawable/ic_edit_black_24dp" />
+
+            <RelativeLayout
+                android:id="@+id/myacc_iconhead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="48dp">
+
+                <ImageView
+                    android:id="@+id/myacc_user_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_iconmonstr_user_19" />
+
+                <TextView
+                    android:id="@+id/myacc_usrnm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/myacc_user_img"
+                    android:padding="16dp"
+                    android:text="Username"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/myacc_details"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:layout_below="@id/myacc_iconhead"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="48dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="236dp"
+                        android:background="@drawable/myaccount_gradients"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/myacc_img_ph"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:src="@drawable/ic_local_phone_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/myacc_card1_val_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/myacc_img_ph"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="4dp"
+                            android:text="MOBILE"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/myacc_card1_phno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myacc_card1_val_1"
+                            android:layout_toRightOf="@+id/myacc_img_ph"
+                            android:paddingBottom="16dp"
+                            android:paddingLeft="16dp"
+                            android:text="+91 8888 7777 66"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/myacc_img_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myacc_img_ph"
+                            android:padding="16dp"
+                            android:src="@drawable/ic_email_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/myacc_card1_val_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myacc_card1_phno"
+                            android:layout_toRightOf="@+id/myacc_img_email"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="4dp"
+                            android:text="EMAIL"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/myacc_card1_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/myacc_card1_val_2"
+                            android:layout_toRightOf="@+id/myacc_img_email"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="16dp"
+                            android:text="abc@gmail.com"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <!--<ImageView-->
+                        <!--android:id="@+id/myacc_img_dob"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/myacc_img_email"-->
+                        <!--android:padding="16dp"-->
+                        <!--android:src="@drawable/ic_cake_black_24dp" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/myacc_card1_val_3"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignStart="@+id/myacc_card1_phno"-->
+                        <!--android:layout_below="@+id/myacc_card1_email"-->
+                        <!--android:paddingBottom="4dp"-->
+                        <!--android:paddingLeft="16dp"-->
+                        <!--android:paddingTop="4dp"-->
+                        <!--android:text="DOB"-->
+                        <!--android:textColor="#FFFFFF" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/myacc_card1_dob"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_below="@+id/myacc_card1_val_3"-->
+                        <!--android:layout_toRightOf="@+id/myacc_img_dob"-->
+                        <!--android:paddingBottom="8dp"-->
+                        <!--android:paddingLeft="16dp"-->
+                        <!--android:text="01/01/2018"-->
+                        <!--android:textColor="#FFFFFF"-->
+                        <!--android:textStyle="bold" />-->
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

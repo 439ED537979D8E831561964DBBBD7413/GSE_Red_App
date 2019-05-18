@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/shadow1">
+
+    <!--<ImageView-->
+        <!--android:layout_width="56dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:src="@mipmap/ic_logo_paytm"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/coupon_code"
+            android:background="@drawable/borderdashed"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="582MAPRO4EDU"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Coupon Title"
+            android:id="@+id/coupon_title"
+            android:padding="5dp"/>
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            android:text="Coupon Description"
+            android:id="@+id/coupon_description"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/coupon_verified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:text="Verified"
+            android:drawableLeft="@drawable/verified"
+            android:drawablePadding="5dp"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:id="@+id/coupon_expires"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:padding="4dp"
+            android:textSize="15sp"
+            android:text="Expires on"
+            android:drawableLeft="@drawable/expires"
+            android:drawablePadding="5dp"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:id="@+id/coupon_used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            android:padding="4dp"
+            android:gravity="end"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/ic_group_black_24dp"
+            android:drawablePadding="5dp"
+            android:text="people used"
+            />
+
+        <TextView
+            android:id="@+id/gotourl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/imgurl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/get_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Get Discount"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/cornorroundbutton"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newsstrip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/colorWhite">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/grey" />
+
+    <ImageView
+        android:id="@+id/newsimage"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:src="@drawable/heart"
+        android:layout_margin="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:id="@+id/newstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_toRightOf="@+id/newsimage"
+        android:layout_toLeftOf="@+id/playbutton"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="INVITE YOUR FRIEND GET INR 51 on each Download and Signup"
+        android:textColor="@color/colorBlack"
+        android:textSize="15dp"/>
+    <TextView
+        android:id="@+id/newsbyline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newstitle"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_toRightOf="@+id/newsimage"
+        android:layout_toLeftOf="@+id/playbutton"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="GET INR 51 on each Download and Signup"
+        android:textSize="12dp"/>
+    <TextView
+        android:id="@+id/playbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/cornorroundbutton"
+        android:text="Play"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone"/>
+
+</RelativeLayout>

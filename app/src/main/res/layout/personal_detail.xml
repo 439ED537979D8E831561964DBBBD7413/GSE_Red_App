@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="3dp"
+                android:text="Kanha"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp"/>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:inputType="text"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/emailline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:id="@+id/useremail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="Kanha@gmail.com"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/editemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@drawable/ic_edit_black_24dp"
+                    android:text="Edit"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Number"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp"/>
+            <EditText
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:inputType="number"
+                android:visibility="gone"/>
+            <RelativeLayout
+                android:id="@+id/contactline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:id="@+id/usercontact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="8793955213"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/editcontact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@drawable/ic_edit_black_24dp"
+                    android:text="Edit"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12dp"/>
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:indeterminateTint="#F00"
+                android:indeterminateTintMode="src_in"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:text="Save Changes"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/cornorroundbutton"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

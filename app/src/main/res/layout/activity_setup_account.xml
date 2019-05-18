@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account.SetupAccount">
+
+    <RelativeLayout
+        android:id="@+id/acc_set_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/acc_set_detailsview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/acc_setup_bkg"
+            android:padding="16dp">
+
+
+            <ImageButton
+                android:id="@+id/acc_set_det_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:src="?attr/actionModeCloseDrawable" />
+
+            <TextView
+                android:id="@+id/acc_set_emailtv"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/acc_set_det_back"
+                android:fontFamily="sans-serif"
+                android:padding="16dp"
+                android:text="Enter your name &amp; your email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/place_autocomplete_prediction_primary_text"
+                android:textSize="36sp" />
+
+            <LinearLayout
+                android:id="@+id/acc_set_name_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/acc_set_emailtv"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="FULL NAME"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/place_autocomplete_prediction_primary_text" />
+
+                <EditText
+                    android:id="@+id/acc_set_name"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nextFocusDown="@id/acc_set_email"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/acc_set_email_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/acc_set_name_view"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="EMAIL"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/place_autocomplete_prediction_primary_text" />
+
+                <EditText
+                    android:id="@+id/acc_set_email"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nextFocusForward="@id/acc_set_onward"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/acc_set_dobview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/acc_setup_bkg"
+            android:padding="16dp"
+            android:visibility="visible">
+
+
+            <ImageButton
+                android:id="@+id/acc_set_dob_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:src="?attr/actionModeCloseDrawable" />
+
+            <TextView
+                android:id="@+id/acc_set_dobtv"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/acc_set_dob_back"
+                android:fontFamily="sans-serif"
+                android:padding="16dp"
+                android:text="Few more details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/place_autocomplete_prediction_primary_text"
+                android:textSize="36sp" />
+
+            <LinearLayout
+                android:id="@+id/acc_set_dob_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/acc_set_dobtv"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="DD/MM/YYYY"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/place_autocomplete_prediction_primary_text" />
+
+                <TextView
+                    android:id="@+id/acc_set_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:text="Click to select date."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/acc_set_mobilenumber_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/acc_set_dob_view"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="MOBILE NUMBER"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/place_autocomplete_prediction_primary_text" />
+
+                <EditText
+                    android:id="@+id/acc_set_mobilenumber"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nextFocusForward="@id/acc_set_password"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/acc_set_password_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/acc_set_mobilenumber_view"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="PASSWORD"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/place_autocomplete_prediction_primary_text" />
+
+                <EditText
+                    android:id="@+id/acc_set_password"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nextFocusForward="@id/acc_set_onward"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/acc_set_imgview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/acc_setup_bkg"
+            android:padding="16dp"
+            android:visibility="visible">
+
+
+            <ImageButton
+                android:id="@+id/acc_set_img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:src="?attr/actionModeCloseDrawable" />
+
+            <TextView
+                android:id="@+id/acc_set_imgtv"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/acc_set_img_back"
+                android:fontFamily="sans-serif"
+                android:paddingBottom="4dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:text="Profile picture"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/place_autocomplete_prediction_primary_text"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/acc_set_img_dettv"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acc_set_imgtv"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Click on the image below to edit, it is saved on your device."
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <LinearLayout
+                android:id="@+id/acc_set_img_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acc_set_img_dettv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <ImageView
+                    android:id="@+id/acc_set_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_iconmonstr_user_19" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/acc_set_doneview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/acc_setup_bkg"
+            android:padding="16dp"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/acc_set_donetv"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="56dp"
+                android:fontFamily="sans-serif"
+                android:padding="16dp"
+                android:text="Done :)"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/place_autocomplete_prediction_primary_text"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/acc_set_done_savetv"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acc_set_donetv"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Save your profile. All set to go."
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/acc_set_onward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:text="onwards"
+        android:windowSoftInputMode="adjustResize" />
+
+</RelativeLayout>

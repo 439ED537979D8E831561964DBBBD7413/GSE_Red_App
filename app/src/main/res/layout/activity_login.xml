@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Auth_view">
+
+    <RelativeLayout
+        android:id="@+id/bkg_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/loginbkg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/otp_welcome_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/otp_gsered_tv"
+                android:layout_centerHorizontal="true"
+                android:text="W E L C O M E   T O"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/otp_gsered_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/ngoname"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:textColor="#FFFFFF"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/form_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bkg_view"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/otp_form_ph"
+            android:layout_alignStart="@+id/otp_cc_tv"
+            android:layout_marginBottom="-50dp"
+            android:padding="16dp"
+            android:text="Phone Number"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"
+             />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccp_defaultNameCode="IN"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            />
+
+        <EditText
+            android:id="@+id/otp_form_ph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/ccp"
+            android:layout_marginTop="47dp"
+            android:backgroundTint="@color/colorAccent"
+            android:hint="eg.999988XXXX"
+            android:inputType="phone"
+            android:paddingBottom="9dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp">
+            <requestFocus/>
+        </EditText>
+
+        <EditText
+            android:id="@+id/otp_form_ph_ver"
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            android:layout_centerHorizontal="true"
+            android:hint="Code"
+            android:inputType="phone"
+            android:padding="8dp"
+            android:layout_marginTop="300dp"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Notification.Emphasis"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/newsignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_margin="20dp"
+            android:paddingBottom="30dp"
+            android:textColor="@color/colorBlack"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="New to GSE Red? SIGN UP"
+            android:visibility="gone"
+            />
+
+
+        <Button
+            android:id="@+id/otp_form_verifybt"
+            android:layout_width="111dp"
+            android:layout_height="39dp"
+            android:layout_alignEnd="@+id/otp_form_ph"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/loginbutton"
+            android:text="Verify OTP"
+            android:textColor="#FFFFFF"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/otp_form_status"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/otp_form_bt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="10dp"
+            android:padding="0dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Notification.Emphasis" />
+
+        <Button
+            android:id="@+id/otp_form_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/otp_form_ph"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/loginbutton"
+            android:text="SEND OTP"
+            android:layout_marginTop="20dp"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gsered.gse.aboutus"
+    android:background="@color/colorWhite"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@android:style/Widget.DeviceDefault.Light.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                android:text="@string/app_name"
+                android:textColor="@color/colorBlack"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:text="Version 2.0" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                android:textColor="@color/colorBlack"
+                android:text="\u00A9 2018-2019, gsered.com" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView6"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="2sp"
+                android:text="@string/about_content"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:padding="16dp"/>
+
+            <!--terms and conditions-->
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/termscond"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/textView4"-->
+            <!--android:layout_marginTop="8dp">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:padding="16dp"-->
+            <!--android:text="Terms and Conditions"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:padding="16dp"-->
+            <!--android:text=">"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
+
+            <!--</RelativeLayout>-->
+
+            <!--privacy policy-->
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/privacypol"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/termscond">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:padding="16dp"-->
+            <!--android:text="Privacy Policy"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:padding="16dp"-->
+            <!--android:text=">"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
+
+            <!--</RelativeLayout>-->
+
+            <!--visit site-->
+            <RelativeLayout
+                android:id="@+id/visitsite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/alltransaction"
+                    android:drawablePadding="5dp"
+                    android:padding="12dp"
+                    android:text="@string/visit_name"
+                    android:textSize="17dp"
+                    android:textColor="@color/colorBlack"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:padding="16dp"-->
+                    <!--android:text=">"-->
+                    <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
+
+            </RelativeLayout>
+
+            <!--connect us-->
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/visitsite"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Follow us"
+                android:textColor="@color/colorBlack"
+                android:padding="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fbfab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView7"
+                android:clickable="true"
+                android:theme="@style/fb_fab"
+                android:layout_marginLeft="16dp"
+                app:srcCompat="@drawable/ic_iconmonstr_facebook_1" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/twtfab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/fbfab"
+                android:layout_marginStart="14dp"
+                android:layout_toEndOf="@+id/fbfab"
+                android:clickable="true"
+                android:theme="@style/tweet_fab"
+                app:srcCompat="@drawable/ic_iconmonstr_twitter_1" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/instfab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/twtfab"
+                android:layout_marginStart="13dp"
+                android:layout_toEndOf="@+id/twtfab"
+                android:clickable="true"
+                android:theme="@style/insta_fab"
+                app:srcCompat="@drawable/ic_iconmonstr_instagram_11" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/ytfab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/instfab"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/instfab"
+                android:clickable="true"
+                android:theme="@style/yt_fab"
+                app:srcCompat="@drawable/ic_iconmonstr_youtube_6" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

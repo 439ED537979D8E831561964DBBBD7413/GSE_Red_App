@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">GSE Red</string>
+    <string name="app_bar_name">GSE Red</string>
+    <string name="ngoname">GSE Red</string>
+    <string name="nav_header_ngo">GSE Red</string>
+    <string name="hello">Hello, </string>
+    <string name="donateto">Donate to </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Welcome</string>
+    <string name="visit_name">Visit GSE Red</string>
+    <!--<string name="nav_header_subtitle">android.studio@android.com</string>-->
+
+    <string name="title_home">Home</string>
+    <string name="title_news">News</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="about_content">
+        GSE Red is Free Fund Raising Platform for Charity/Cause through shopping without paying any extra penny. Access all 370+ apps in just less than 11MB.
+        We have partnered with Flipkart, Amazon, Swiggy, Make my Trip and more than 370+ companies and connected with more than 50+ charities in India.
+        We make raising funds for charities easy and fun just by shopping online with our leading partners. Shopping and raising funds for charities has never been made this easier.
+    </string>
+</resources>

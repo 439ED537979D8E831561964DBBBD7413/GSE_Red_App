@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CouponsActivity"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/progressbar">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="#F00"
+            android:indeterminateTintMode="src_in"
+            android:layout_gravity="center" />
+    </FrameLayout>
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:background="@color/colorWhite"
+        android:id="@+id/companyname">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/companylogo"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="10dp"
+            android:src="@mipmap/flipkart_logo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/companyname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flipkart"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/companyraise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upto 12% donation to ngoname"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"/>
+            <Button
+                android:id="@+id/companyactivate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go Direct"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/cornorroundbutton"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        android:id="@+id/tabs"
+        app:tabTextColor="@color/colorBlack"
+        app:tabIndicatorColor="@color/colorPrimary"
+        android:background="@color/colorWhite" />
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager_id"></android.support.v4.view.ViewPager>
+</LinearLayout>

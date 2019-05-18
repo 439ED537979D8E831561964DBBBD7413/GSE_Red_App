@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.TransactionActivity"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminate="true"
+        android:layout_margin="30dp"
+        android:padding="10dp"
+        android:background="@drawable/cornorroundwhite"
+        android:indeterminateTint="#F00"
+        android:indeterminateTintMode="src_in"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/textView_notransaction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/ic_cloud_off_black_24dp"/>
+        <TextView
+            android:id="@+id/displayerror"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:textSize="20dp"
+            android:text="No Transaction"
+            android:layout_gravity="center"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:padding="20dp"
+            android:textSize="15dp"
+            android:text="Update on every 72 hrs"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/transactionlist"
+        android:orientation="vertical">
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="For any query, kindly contact us."
+                android:textSize="13dp"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/colorWhite"/>
+
+            <Button
+                android:id="@+id/contactbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/redeembutton"
+                android:layout_alignParentRight="true"
+                android:text="Contact"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
