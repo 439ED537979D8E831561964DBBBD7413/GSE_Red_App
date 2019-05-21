@@ -1233,8 +1233,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-
+        int i=0;
     }
 
     @Override
