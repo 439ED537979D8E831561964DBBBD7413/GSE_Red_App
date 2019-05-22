@@ -84,6 +84,7 @@ public class company_webview extends Fragment {
         webSetting.setUseWideViewPort(true);
         webSetting.setDomStorageEnabled(true);
         webSetting.setAllowFileAccess(true);
+        webSetting.setAppCacheEnabled(true);
         webView.setWebViewClient(new company_webview.WebViewClient());
         webView.loadUrl(url);
 

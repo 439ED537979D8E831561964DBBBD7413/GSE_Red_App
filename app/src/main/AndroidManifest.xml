@@ -235,6 +235,7 @@
             android:parentActivityName=".SigninActivity" />
         <activity
             android:name=".OpenUrl"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

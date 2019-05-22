@@ -121,6 +121,7 @@ public class VisitShop extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                handler.removeCallbacks(runnable);
                 Intent i = new Intent(VisitShop.this, OpenUrl.class);
                 i.putExtra("url", readylink);
                 startActivity(i);

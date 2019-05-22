@@ -1,6 +1,7 @@
 package com.gsered.gse;
 
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,9 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -24,6 +28,10 @@ public class OpenUrl extends AppCompatActivity {
     String link;
     WebView webView;
     ProgressBar progressBar;
+    Runnable runnable;
+    android.os.Handler handler = null;
+    int count;
+    String dat="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +42,70 @@ public class OpenUrl extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
 
+        //start updating game reward 4times a day
+        Date c = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+        String todayDate = df.format(c);
+
         String u = getIntent().getStringExtra("url");
         if(u.contains("gamezop")) {
-            countplaytime();
+            SharedPreferences sharedPreferences = getSharedPreferences("rewardcount", MODE_PRIVATE);
+            count = sharedPreferences.getInt( "rewardcount",0);
+            dat = sharedPreferences.getString( "rewardcountdate","");
+
+            if(dat.isEmpty() || !dat.equalsIgnoreCase(todayDate)){
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("rewardcountdate", todayDate);
+                editor.commit();
+                count = 0;
+            }
+
+            if(count != 4){
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putInt("rewardcount", count+1);
+                editor.commit();
+                countplaytime();
+            }
+//            Log.e("rewardcountdate : ", dat);
+//            Log.e("rewardcount : ", String.valueOf(count));
+        }
+        // end reward updateing
+        home();
+
+        if(savedInstanceState==null){
+            webView.post(new Runnable() {
+                @Override
+                public void run() {
+                    home();
+                }
+            });
         }
 
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState )
+    {
+        super.onSaveInstanceState(outState);
+        webView.saveState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        webView.restoreState(savedInstanceState);
+    }
+
     private void countplaytime() {
-        new Handler().postDelayed(new Runnable() {
+
+        handler = new android.os.Handler();
+        runnable = new Runnable() {
             @Override
             public void run() {
                 SharedPreferences sharedPreferences = getSharedPreferences("SIGNCRED", MODE_PRIVATE);
@@ -66,23 +129,25 @@ public class OpenUrl extends AppCompatActivity {
                             String responseStr = response.body().string();
                             if(OpenUrl.this == null)
                                 return;
+
+                            Log.e("game db : ", "updated");
                         }
                     }
                 });
 
             }
-        }, 900000);
+        };
+        handler.postDelayed(runnable, 2000);
 
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        home();
     }
 
     public void click(View view) {
-        link = "https://flipkart.com";
+        link = "https://gsered.com";
         loadLink();
     }
 
@@ -111,12 +176,14 @@ public class OpenUrl extends AppCompatActivity {
         webSetting.setLoadWithOverviewMode(true);
         webSetting.setUseWideViewPort(true);
         webSetting.setDomStorageEnabled(true);
+        webSetting.setAppCacheEnabled(true);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(getIntent().getStringExtra("url"));
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
+        handler.removeCallbacks(runnable);
         if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
             webView.goBack();
             return true;
@@ -131,7 +198,7 @@ public class OpenUrl extends AppCompatActivity {
 
             // TODO Auto-generated method stub
             super.onPageStarted(view, url, favicon);
-//            progressBar.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -147,7 +214,7 @@ public class OpenUrl extends AppCompatActivity {
             // TODO Auto-generated method stub
 
             super.onPageFinished(view, url);
-//            progressBar.setVisibility(View.GONE);
+            progressBar.setVisibility(View.GONE);
         }
     }
 }

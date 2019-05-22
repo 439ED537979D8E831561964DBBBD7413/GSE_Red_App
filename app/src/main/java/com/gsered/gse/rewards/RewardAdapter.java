@@ -74,6 +74,7 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.MyHolder> 
             holder.title.setText("You've Won");
             holder.amount.setText(rewards.get(position).getRewardamount());
         }
+
     }
 
     @Override
@@ -103,6 +104,7 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.MyHolder> 
 
         @Override
         public void onClick(View view) {
+
             if( (flag.equalsIgnoreCase("2")) )
                 return;
 
@@ -141,6 +143,7 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.MyHolder> 
                 hidereward.setBackgroundResource(R.drawable.blacksolidborder);
 
                 // to show at reward page
+                rewards.get(getAdapterPosition()).setSeen("1");
                 this.flag = "1";
                 this.image.setImageResource(R.drawable.seen);
                 this.title.setText("You've Won");
